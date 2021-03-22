@@ -4,11 +4,11 @@ void main(){
   int a = 10;
   int b = 20;
   //밑에 처럼 변수 이름을 명시 camel case (낙타형)
-  int MyAge = 10; //이런식으로 변수이름은 의미를 두어야함
+  // int MyAge = 10; //이런식으로 변수이름은 의미를 두어야함
   int brotherAge = 20;
   //snake case (뱀형)
-  int my_age = 10;
-  int brother_age = 20;
+  // int my_age = 10;
+  // int brother_age = 20;
   //[숫자형]
   // int b = 5.5; ctrl+/ 전체 주석처리
     double c = 10.5; //실수(소수점)
@@ -19,17 +19,24 @@ void main(){
   isMarried = false; //결혼 안했다.
   //숫자목록
   List<int> ageList = [10,20,30];
-  var ageList = [10,20,30];
+  // var ageList = [10,20,30];
   //문자열
   List<String> nameList = ['홍길동','한석봉','박준성'];
-  var nameList =  ['홍길동','한석봉','박준성']; //var 쓰면 다트언어가 타입을 알음
+  // var nameList =  ['홍길동','한석봉','박준성']; //var 쓰면 다트언어가 타입을 알음
   // null (값이 없다.)
-  int g; //null
+  //int g; //null
   int g = 0;//이건 0이라는 값이 존재 null 과는 전혀 다름
   g = 10; //null 이 아니다 10임 // 값이 아직 안들어간 변수
 
   String name3 = ''; // 아무것도없는 0개의 문자
   String name4; // 이건 null
+
+  double tax = 1.1; //세금
+  int fax = 5; //팩스 가격
+  print('5만원짜리를 4만원으로 할인합니다.');
+  tax = 4;//tax = 4; 팩스가격을 수정해야되는데 , 세금변수를 건드림.
+  print('팩스의 새로운 가격은(세금포함) ${fax * tax} 만원!'); // 잘못된예시 20만원, 수정하면 4.4만원
+
 
 
 
