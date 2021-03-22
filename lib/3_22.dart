@@ -41,6 +41,7 @@ void main(){
   exam1();//exam1함수를 실행
   exam2();//exam2함수를 실행
   exam3();
+  dice();
 }
 //exam1 함수를 만들었다.
 void exam1(){
@@ -72,7 +73,7 @@ void exam2(){
 }
 void exam3(){
   var names = ['한석봉','심사임당','이순신',];
-  //반복문 for문 : 목록이 있으면
+  //반복문 for 문 : 목록이 있으면
   for (var name in names){
 
   print ('내 이름은 $name입니다');
@@ -88,13 +89,20 @@ void exam3(){
   //조건문
   // == 같은지비교
   // >,<,>=,<=
-  int a = 2;
-  if(a > 10){
+  int b = 2;
+  if(b > 10){
     print('5보다 크다');
-  } else if (a > 3){
+  } else if (b > 3){
     print('5보다 크다');
   } else {
     print('3보다 작다');
   }
   }
+}
+
+void dice(){
+  var rng = Random();
+  print(rng.nextInt(6) + 1);// 1 ~ 6
+
+
 }
