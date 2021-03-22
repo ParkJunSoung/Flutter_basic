@@ -101,8 +101,8 @@ void exam3(){
 }
 
 void dice(){
-  var rng = Random();
-  print(rng.nextInt(6) + 1);// 1 ~ 6
+  var random = Random();
+  print(random.nextInt(6) + 1);// 1 ~ 6
 
 
 }
