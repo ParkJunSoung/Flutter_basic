@@ -31,7 +31,7 @@ void main(){
   String name3 = ''; // 아무것도없는 0개의 문자
   String name4; // 이건 null
 
-  double tax = 1.1; //세금
+  final double tax = 1.1; //세금 final 을 넣으면 변수가 수정이 안됨 (상수)=변하지않는값
   int fax = 5; //팩스 가격
   print('5만원짜리를 4만원으로 할인합니다.');
   fax = 4;//tax = 4; 팩스가격을 수정해야되는데 , 세금변수를 건드림.
