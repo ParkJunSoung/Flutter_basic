@@ -1,3 +1,5 @@
+import 'dart:math'; //import 문  수학사용문
+
 //main 메소드 또는 함수라고 부름
 void main(){
   //잘못된 변수 이름
@@ -57,6 +59,7 @@ void main(){
   double test2 = 3.14;
   int test3 = 314159265853979;
   String test4 = ('"항구를 공격! 적에게 15포인트의 데미지를 주었다"');
+  print(pi); //dart math 패키지 사용
 
 
 
