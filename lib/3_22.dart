@@ -40,6 +40,7 @@ void main(){
   print('팩스의 새로운 가격은(세금포함) ${fax * tax} 만원!'); // 잘못된예시 20만원, 수정하면 4.4만원
   exam1();//exam1함수를 실행
   exam2();//exam2함수를 실행
+  exam3();
 }
 //exam1 함수를 만들었다.
 void exam1(){
@@ -70,11 +71,30 @@ void exam2(){
   print(pi); //dart math 패키지 사용
 }
 void exam3(){
-print ('내 이름은 한석봉입니다');
-print ('내 이름은 한석봉입니다');
-print ('내 이름은 한석봉입니다');
-print ('내 이름은 한석봉입니다');
-print ('내 이름은 한석봉입니다');
-print ('내 이름은 한석봉입니다');
-print ('내 이름은 한석봉입니다');
+  var names = ['한석봉','심사임당','이순신',];
+  //반복문 for문 : 목록이 있으면
+  for (var name in names){
+
+  print ('내 이름은 $name입니다');
+  //1~12까지 출력
+  //++ : 1증가
+  for (int month = 1; month <= 12; month++) {
+    print(month);
+  }
+  //100번 실행
+  for (int i = 0; i < 100; i++){
+    print('내 이름은 박준성');
+  }
+  //조건문
+  // == 같은지비교
+  // >,<,>=,<=
+  int a = 2;
+  if(a > 10){
+    print('5보다 크다');
+  } else if (a > 3){
+    print('5보다 크다');
+  } else {
+    print('3보다 작다');
+  }
+  }
 }
