@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'dart:math';
+//메인함수
 void main() {
   var weight = 60;
   var age1 = 10;
@@ -9,7 +11,8 @@ void main() {
   if (weight == 60) {
   }
   //변수 age1 과 age2 의 합계를 2배 한 것이 60을 넘는다
-  if (age1 + age2 * 2 <= weight) {
+  // 괄호를 나눠야됨 넘는다 > 표시 수정오류
+  if ((age1 + age2) * 2 > weight) {
   }
   //변수 age 가 홀수다
   if (age.isOdd) {
@@ -17,7 +20,7 @@ void main() {
   //변수 name 에 저장된 문자열이 “스마트"와 같다
   if (name == '스마트') {
   }
-
+  print('주사위 : ${dice()}');
   ex3();
   ex4();
 }
@@ -63,16 +66,25 @@ void ex4(){
     print('[메뉴] 1:검색 2:등록 3:삭제 4:변경');
     //키보드로 숫자를 입력하고, 변수 selected 에 대입한다.
     var selected = stdin.readLineSync();
-    //만약 변수 selected 가 1 이면 “검색합니다", 2이면 “등록합니다", 3이면 “삭제합니다", 4이면 “변경합니다"를 표시한다
+    //만약 변수 selected 가 1 이면 “검색합니다"
     //selected 가 1 부터 4 사이의 값이 아니라면 아무것도 하지 않는다
     if(selected == '1'){
     print('"검색합니다"');
+    //2이면 “등록합니다"
   } else if(selected == '2'){
     print('"등록합니다"');
+    //3이면 “삭제합니다"
   } else if(selected == '3'){
     print('"삭제합니다"');
+    //4이면 “변경합니다"
   } else if(selected == '4'){
     print('"변경합니다"');
   }
 
+}
+//void  실행되고 끝남 값이없음.
+int dice() {
+  Random random = Random();
+  //print(random.nextInt(6) + 1);// 1 ~ 6
+  return random.nextInt(6) + 1;
 }
