@@ -88,3 +88,23 @@ int dice() {
   //print(random.nextInt(6) + 1);// 1 ~ 6
   return random.nextInt(6) + 1;
 }
+//10까지 나오는 주사위
+int dice10() {
+  Random random = Random();
+  return random.nextInt(10) + 1;
+}
+//10까지 나오는 주사위
+int dice5() {
+  Random random = Random();
+  return random.nextInt(5) + 1;
+}
+//10까지 나오는 주사위
+int dice7() {
+  Random random = Random();
+  return random.nextInt(7) + 1;
+}
+//10까지 나오는 주사위
+int dice8() {
+  Random random = Random();
+  return random.nextInt(8) + 1;
+}
