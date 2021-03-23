@@ -20,9 +20,9 @@ void main() {
   //변수 name 에 저장된 문자열이 “스마트"와 같다
   if (name == '스마트') {
   }
-  print('주사위 : ${dice()}');
-  ex3();
-  ex4();
+  print('주사위 : ${dice(100)}');
+  //ex3();
+  //ex4();
 }
 // void ex2(){
 //   var cost = 300;
@@ -83,28 +83,11 @@ void ex4(){
 
 }
 //void  실행되고 끝남 값이없음.
-int dice() {
+//입력   (출력)
+int dice(int num) {
   Random random = Random();
   //print(random.nextInt(6) + 1);// 1 ~ 6
-  return random.nextInt(6) + 1;
-}
-//10까지 나오는 주사위
-int dice10() {
-  Random random = Random();
-  return random.nextInt(10) + 1;
-}
-//10까지 나오는 주사위
-int dice5() {
-  Random random = Random();
-  return random.nextInt(5) + 1;
-}
-//10까지 나오는 주사위
-int dice7() {
-  Random random = Random();
-  return random.nextInt(7) + 1;
-}
-//10까지 나오는 주사위
-int dice8() {
-  Random random = Random();
-  return random.nextInt(8) + 1;
+  return random.nextInt(num) + 1;
+  //f(x) = x +2 = 4
+  //x=2  정수 num  하나를 받아서 정수(1 부터 num 까지)를 반환한다 (리턴)
 }
