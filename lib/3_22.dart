@@ -1,4 +1,5 @@
 import 'dart:math'; //import 문  수학사용문
+import 'dart:io';
 
 //main 메소드 또는 함수라고 부름
 void main(){
@@ -38,10 +39,11 @@ void main(){
   print('5만원짜리를 4만원으로 할인합니다.');
   fax = 4;//tax = 4; 팩스가격을 수정해야되는데 , 세금변수를 건드림.
   print('팩스의 새로운 가격은(세금포함) ${fax * tax} 만원!'); // 잘못된예시 20만원, 수정하면 4.4만원
-  exam1();//exam1함수를 실행
-  exam2();//exam2함수를 실행
-  exam3();
-  dice();
+  //exam1();//exam1함수를 실행
+  //exam2();//exam2함수를 실행
+  //exam3();
+  //dice();
+  exam4();
 }
 //exam1 함수를 만들었다.
 void exam1(){
@@ -105,4 +107,18 @@ void dice(){
   print(random.nextInt(6) + 1);// 1 ~ 6
 
 
+}
+
+void exam4(){
+  print('"점을 보세요"');//화면에 "점을 보세요" 라고 표시합니다.
+  print('"이름을 입력해 주세요"');//화면에 "이름을 입력해주세요" 라고 표시합니다.
+  String name = stdin.readLineSync();//키보드로부터 1행의 문자열을 입력받아,Srting형 변수 name에 넣습니다
+  print('"나이를 입력 해주세요"');//화면에 "나이를 입력 해 주세요"라고 표시합니다.
+  String ageString = stdin.readLineSync();//키보드로부터 1행의 무낮 입력을 받아,String형 변수 ageString에 넣습니다.
+  var age = int.parse(ageString);//변수 ageString 의 내용을 int 형으로 변환하고,int형 변수 age에 대입한다
+  var rng = Random(); // 0~3까지의 난수를 생성한다
+  int fortune = rng.nextInt(4) + 1;// fortune 에 대입하고 , 연산자 1증가 1~4난수표현
+  print('"점꾀가 나왔습니다."');//화면에 "점꾀가 나왔습니다." 표시합니다.
+  print('"$ageString살의 $name씨, 당신의 운세번호는 $fortune 입니다."');//화면에 (나이)살의 (이름)씨, 당신의운세번호는(난수)표시합니다.
+  print('"1:대박,2:중박,3:보통,4:망"');//화면에 "1:대박,2:중박,3:보통,4:망"표시합니다.
 }
