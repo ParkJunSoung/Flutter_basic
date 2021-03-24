@@ -1,17 +1,22 @@
 void main() {
-  List<int> socres = [100, 50, 70, 30];
+  List<int> scores = [100, 50, 70, 30, 80];
+  print(scores.length); // 리스트의 갯수
 
-  int sum = total(socres[0], socres[1], socres[2], socres[3]);
-  double average = avg(socres[0], socres[1], socres[2], socres[3]);
+  int sum = total(scores);
+  double average = avg(scores);
 
   print('합계 : $sum');
   print('평균 : ${average.toStringAsFixed(2)}');
 }
 
-int total(int korean, int math, int english, int science) {
-  return korean + math + english + science;
+int total(List<int> scores) {
+  int result = 0;
+  for (int i =0; i < scores.length; i ++){
+    result = result + scores[i];
+  }
+  return result;
 }
 
-double avg(int korean, int math, int english, int science) {
-  return (korean + math + english + science) / 4;
+double avg(List<int> scores) {
+  return total(scores) / scores.length;
 }
