@@ -20,9 +20,11 @@ void main() {
   //변수 name 에 저장된 문자열이 “스마트"와 같다
   if (name == '스마트') {
   }
-  print('주사위 : ${dice(100)}');
+  print('주사위 : ${dice(5,10)}');
   //ex3();
   //ex4();
+
+
 }
 // void ex2(){
 //   var cost = 300;
@@ -84,10 +86,25 @@ void ex4(){
 }
 //void  실행되고 끝남 값이없음.
 //입력   (출력)
-int dice(int num) {
+//&& 그리고 || 또는
+//매개변수를 {} 감싸면 선택적으로 매개변수를 선택가능  specify named parameters(선택적 파라미터) 매개변수
+int dice(int start, int end) {
   Random random = Random();
   //print(random.nextInt(6) + 1);// 1 ~ 6
-  return random.nextInt(num) + 1;
+  return random.nextInt(end - start +1) + start;
   //f(x) = x +2 = 4
   //x=2  정수 num  하나를 받아서 정수(1 부터 num 까지)를 반환한다 (리턴)
 }
+int dice2(int num) {
+  return Random().nextInt(num) + 1;
+}
+//함수의 내용이 한줄일 경우에 위와같이 한줄코드 작성도 가능 람다식 (lambda expression)
+//num : 파라미터 , 매개변수 , parameter
+int dice3(int num) => Random().nextInt(num) + 1;
+
+
+
+
+
+
+
