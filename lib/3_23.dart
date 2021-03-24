@@ -23,7 +23,11 @@ void main() {
   print('주사위 : ${dice(5,10)}');
   //ex3();
   //ex4();
-
+  //email('슬기로운 코딩생활', 'madox9999@gnail.com', '즐겁게 배우자!');
+  email(address: 'madox9999@gnail.com', text: '즐겁게 배우자!');
+  introduceOneself();
+  print('면적은 ${calcTriangleArea(5.5, 6.5)}cm');
+  print('면적은 ${calcCircleArea(7.5)}cm');
 
 }
 // void ex2(){
@@ -101,7 +105,32 @@ int dice2(int num) {
 //함수의 내용이 한줄일 경우에 위와같이 한줄코드 작성도 가능 람다식 (lambda expression)
 //num : 파라미터 , 매개변수 , parameter
 int dice3(int num) => Random().nextInt(num) + 1;
+void introduceOneself() {
+  String name = '박준성';
+  int age = 28;
+  double height = 175.5;
+  String gender = '남자';
+  print('안녕하세요 저는 $name 입니다. 제 키는 $height cm 입니다. 제 나이는 $age살 $gender입니다.');
+}
+//@required 꼭써야되는 매개는 앞에 @required 씀 안쓰면 경고를줌
+void email({String title, String address, String text}) {
+  //tutle 인자로 들어온 값은 뭐야?
+  print('$address 에 아래의 메일을 송신한다');
+  if (title == null) {
+    title = '제목없음';
+  }
+  print('제목: $title');
+  print('본문: $text');
+}
+//함수를 사용하는 이유는 재사용성 편의
+double calcTriangleArea(double height, double base) {
+  return height * base / 2;
+}
 
+// 3.14 * r^2
+double calcCircleArea(double radius) {
+  return 3.14 * radius * 2;
+}
 
 
 

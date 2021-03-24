@@ -44,6 +44,7 @@ void main(){
   //exam3();
   //dice();
   //exam4();
+
 }
 //exam1 함수를 만들었다.
 void exam1(){
