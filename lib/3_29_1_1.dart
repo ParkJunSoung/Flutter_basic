@@ -37,22 +37,27 @@ class Word {
 
   //복수형으로 변환
   String toPlural() {
-    if (letters.endsWith('s') || letters.endsWith('x') ||
-        letters.endsWith('ch') || letters.endsWith('sh') ||
+    String result = '${letters}s';
+    // s, x, ch, sh : -es
+    if (letters.endsWith('s') ||
+        letters.endsWith('x') ||
+        letters.endsWith('ch') ||
+        letters.endsWith('sh') ||
         letters.endsWith('o')) {
-      return letters + 'es';
+      result = '${letters}es';
+    } else if (letters.endsWith('f')) {
+      // f -> ves
+      result = '${letters.substring(0, letters.length - 1)}ves';
+    } else if (letters.endsWith('fe')) {
+      // fe -> ves
+      result = '${letters.substring(0, letters.length - 2)}ves';
+    } else if (isConsonant(letters.length - 2) && letters.endsWith('y')) {
+      // 자음 + y : y -> ies
+      result = '${letters.substring(0, letters.length - 1)}ies';
     }
-    if (letters.endsWith('f') || letters.endsWith('fe')) {
-      return letters.replaceAll('f', 'ves');
-    }
-    else if (letters.endsWith('a') || letters.endsWith('i') || letters.endsWith('u') ||
-        letters.endsWith('e') || letters.endsWith('o')) {
-      return letters.replaceAll('y', 'ies');
-    } else
-      return letters + 's';
-
-    }
-
+    return result;
   }
+
+
 
 
