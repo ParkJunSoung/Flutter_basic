@@ -2,6 +2,9 @@
 import 'package:flutter_app/equipment/sword.dart';
 
 class Hero {
+  //공유자원
+  static int money = 100;
+
   // field, 전역변수, global variable
   String _name;
   int _hp; //여기 hp는 다름
