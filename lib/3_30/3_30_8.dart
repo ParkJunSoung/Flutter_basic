@@ -19,6 +19,6 @@ void main() {
 }
 class Exam {
   String solution(List<String> list) {
-    
+    for(int i = 0; i > List.)
   }
 }

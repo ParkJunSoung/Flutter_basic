@@ -21,13 +21,22 @@ void main() {
 }
 
 class Exam {
-  int solution(int m, int n) {
-    int result = 0;
+  String solution(int m, int n) {
+    String result = '';
     for (int i = 0; i < 10; i++){
-      result =  m;
+      int ex = m + n * i;
+      result += '$ex ';
     }
-
-
-      return result;
+      return result ;
   }
 }
+
+// class Exam {
+//   int solution(int m, int n) {
+//     int result = 0;
+//     for (int i = 0; i <= 10; i++){
+//       result =  a * i;
+//     }
+//     return result ;
+//   }
+// }
