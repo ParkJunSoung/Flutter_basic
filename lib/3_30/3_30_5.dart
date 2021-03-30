@@ -10,7 +10,6 @@ void main() {
 
 class Exam {
   int solution(int a) {
-    int result = 0;
     if (a == 1) {
       return 6;
     }
