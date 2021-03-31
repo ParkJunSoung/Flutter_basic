@@ -32,9 +32,9 @@ class Exam {
     int km = m * 1000;
 
     if (s == 'km') {
-      result = '$km';
+      result = '${km * n}';
     } else if (s == 'm') {
-      result = '$m';
+      result = '${m * n}';
     } return result;
   }
 }
