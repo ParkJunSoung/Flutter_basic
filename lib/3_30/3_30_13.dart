@@ -10,10 +10,10 @@
 //12 14
 //0 12
 void main() {
-
   Exam exam = Exam();
-  print(exam.solution(10,3));
+  print(exam.solution(10, 3));
 }
+
 class Exam {
   String solution(int m, int n) {
     int a = m ~/ n;
@@ -21,5 +21,4 @@ class Exam {
     String result = '$a $b';
     return result;
   }
-
-  }
+}
