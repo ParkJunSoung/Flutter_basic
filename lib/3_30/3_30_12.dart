@@ -29,3 +29,9 @@ class Exam {
     } return result;
   }
 }
+//베스트 답변  인덱스 에 뭘 넣을꺼냐 ? (알파벳 변수를 받을것이다.)
+// class Exam {
+//   int solution(String alphabet) {
+//     return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.indexOf(alphabet) + 1;
+//   }
+// }
