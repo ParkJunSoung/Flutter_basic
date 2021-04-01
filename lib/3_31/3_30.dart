@@ -15,6 +15,7 @@ void main() {
     // 시끄러운지 판단해서 출력
     Tree tree = Tree(x, y);
     park.trees.add(tree);
+
   }
   // print
   for (Tree tree in park.trees) {
