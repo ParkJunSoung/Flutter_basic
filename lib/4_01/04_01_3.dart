@@ -2,9 +2,9 @@ import 'dart:io';
 
 void main() {
   Exam exam = Exam();
-  //String input = stdin.readLineSync();
+  int input = int.parse(stdin.readLineSync());
 
-  print(exam.solution(31));
+  print(exam.solution(input));
 }
 
 class Exam {
