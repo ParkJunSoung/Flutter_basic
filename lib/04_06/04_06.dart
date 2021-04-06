@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app/04_06/Image_text.dart';
 
 void main() => runApp(MyApp());
@@ -46,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: _page[_index],
+      body:
+      _page[_index],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {
@@ -69,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
+//리스트.맵=>리턴 변환할것 투리스트
 class Page1 extends StatelessWidget {
   var dummyItems = [
     'https://t1.daumcdn.net/movie/f2a2f4499800518cf7b3eb999bd83c4e1f2da89b',
@@ -95,9 +97,9 @@ class Page1 extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            ImageText('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR842FRKqBCOWShGVtJXyVy3pdBk0HrY0GRwQ&usqp=CAU','택시'),
-            ImageText('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR842FRKqBCOWShGVtJXyVy3pdBk0HrY0GRwQ&usqp=CAU','택시'),
-            ImageText('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR842FRKqBCOWShGVtJXyVy3pdBk0HrY0GRwQ&usqp=CAU','택시'),
+            ImageText('https://imagescdn.gettyimagesbank.com/500/201607/a10519864.jpg','택시'),
+            ImageText('https://image.freepik.com/free-vector/bus-icon-design_24877-38816.jpg','버스'),
+            ImageText('https://www.urbanbrush.net/web/wp-content/uploads/edd/2018/10/urbanbrush-20181015090853259417.png','오토바이'),
             ImageText('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR842FRKqBCOWShGVtJXyVy3pdBk0HrY0GRwQ&usqp=CAU','택시'),
           ],
         ),
