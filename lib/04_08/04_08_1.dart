@@ -41,16 +41,28 @@ class _TodoListPageState extends State<TodoListPage> {
   }
   //할 일 추가 메서드
   void _addTodo(Todo todo) {
+    //콜백 callback방식
+    //promise
+    //단점 : 콜백지옥에 빠질수있다.
+    CollectionReference query = FirebaseFirestore.instance.collection('todo');
+    query.add({
+      'title':todo.title,
+      'isDone':todo.isDone
+    }).then((_) {
     setState(() {
-      _items.add(todo);
       _todoController.text = '';
+    });
+    }).catchError((error){
+      //다이얼로그 띄우기
     });
   }
   //할 일 삭제 메서드
-  void _deleteTodo(Todo todo) {
-    setState(() {
-      _items.remove(todo);
-    });
+  void _deleteTodo(DocumentSnapshot todo) {
+    CollectionReference query = FirebaseFirestore.instance.collection('todo');
+
+    query.doc(todo.id).delete()
+        .then((value) => print('성공'))
+        .catchError((error) => print('실패'));
   }
   //할 일 완료/미완료 메서드
   void _toggleTodo(Todo todo) {
@@ -116,7 +128,7 @@ class _TodoListPageState extends State<TodoListPage> {
       ),
       trailing: IconButton(
         icon: Icon(Icons.delete_forever),
-        onPressed: () => _deleteTodo(todo), //삭제
+        onPressed: () => _deleteTodo(doc), //삭제
       ),
     );
   }
