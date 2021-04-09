@@ -30,8 +30,6 @@ class TodoListPage extends StatefulWidget {
   _TodoListPageState createState() => _TodoListPageState();
 }
 class _TodoListPageState extends State<TodoListPage> {
-  //할 일 목록을 저장할 리스트
-  final _items = <Todo>[];
 //할 일 문자열 조작을 위한 컨트롤러
   var _todoController = TextEditingController();
   @override
@@ -63,10 +61,10 @@ class _TodoListPageState extends State<TodoListPage> {
         .catchError((error) => print('실패'));
   }
   //할 일 완료/미완료 메서드
-  void _toggleTodo(Todo todo) {
-    setState(() {
-      todo.isDone = !todo.isDone;
-    });
+  void _toggleTodo(DocumentSnapshot todo) {
+    CollectionReference query = FirebaseFirestore.instance.collection('todo');
+      bool isDone = todo['isDone'];
+      query.doc(todo.id).update({'isDone':!isDone});
   }
   @override
   Widget build(BuildContext context) {
@@ -114,7 +112,7 @@ class _TodoListPageState extends State<TodoListPage> {
   Widget _buildItemWidget(DocumentSnapshot doc) {
     final todo = Todo(doc['title'], isDone: doc['isDone']);
     return ListTile(
-      onTap: () => _toggleTodo(todo), //완료 미완료
+      onTap: () => _toggleTodo(doc), //완료 미완료
       title: Text(
         todo.title,
         style: todo.isDone
