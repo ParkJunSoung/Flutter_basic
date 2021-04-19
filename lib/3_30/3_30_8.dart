@@ -12,13 +12,14 @@ Carol
 Dave
 Ellen
 Hello Alice, Bob, Carol, Dave, Ellen.*/
+import 'dart:io';
 void main() {
-  List<String> inputs = ['Java', 'Gino'];
+  List<String> inputs = stdin.readLineSync().split(' ');
   Exam exam = Exam();
   exam.solution(inputs);
 }
 class Exam {
   String solution(List<String> list) {
-    for(int i = 0; i > List.)
+    for(int i = 0; i > List)
   }
 }

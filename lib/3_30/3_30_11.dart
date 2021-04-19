@@ -11,10 +11,12 @@
 //
 // 15
 // 15
+import 'dart:io';
 void main() {
   Exam exam = Exam();
-  print(exam.solution(-10));
-  print(exam.solution(5));
+  int a = int.parse(stdin.readLineSync());
+  print(exam.solution(a));
+
 }
 
 class Exam {

@@ -18,10 +18,12 @@
 
 //12 m
 //12000
+import 'dart:io';
 void main() {
   Exam exam = Exam();
-  print(exam.solution(3, 'km'));
-  print(exam.solution(5, 'm'));
+  List<String> inputs = stdin.readLineSync().split(' ');
+  print(exam.solution(inputs[0],inputs[1]));
+
 }
 
 class Exam {

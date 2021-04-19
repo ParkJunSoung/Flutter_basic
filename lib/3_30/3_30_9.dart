@@ -14,10 +14,11 @@
 1 3
 
 1 4 7 10 13 16 19 22 25 28*/
+import 'dart:io';
 void main() {
   Exam exam = Exam();
-  print(exam.solution(3, 3));
-  print(exam.solution(5, 10));
+  List<int> inputs = stdin.readLineSync().split(' ').map((e) => int.parse(e)).toList();
+  print(exam.solution(inputs[0], inputs[1]));
 }
 
 class Exam {

@@ -9,9 +9,11 @@
 //
 //12 14
 //0 12
+import 'dart:io';
 void main() {
   Exam exam = Exam();
-  print(exam.solution(10, 3));
+  List<int> inputs = stdin.readLineSync().split(' ').map((e) => int.parse(e)).toList();
+  print(exam.solution(inputs[0], inputs[1]));
 }
 
 class Exam {

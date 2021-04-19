@@ -12,11 +12,12 @@
 //
 //X
 //24
+import 'dart:io';
 void main() {
 
   Exam exam = Exam();
-  print(exam.solution('A'));
-  print(exam.solution('S'));
+  String a = stdin.readLineSync();
+  print(exam.solution(a[0]));
 }
 class Exam {
   String solution(String s) {

@@ -5,10 +5,11 @@
 //
 // aAaAaAa
 // 3
+import 'dart:io';
 void main() {
   Exam exam = Exam();
-  print(exam.solution('PAIZA'));
-  print(exam.solution('aAaAaAa'));
+  String input = stdin.readLineSync();
+  print(exam.solution(input));
 }
 class Exam {
   int solution(String s) {
