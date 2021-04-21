@@ -10,11 +10,5 @@ void main() {
   //
   // print(ten * 10 + one);
   //
-  List<String> E = stdin.readLineSync().split('+');
 
-  for(int i =0; i < E.length; i++)  {
-    if (E[i] = '<') {
-
-    }
-  }
 }
